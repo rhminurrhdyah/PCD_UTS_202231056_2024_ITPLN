@@ -1,5 +1,5 @@
-## pemisahan channel warna, visualisasi histogram, dan manipulasi thresholding
-## pemisahan channel warna
+## Pemisahan channel warna, Visualisasi Histogram, dan Manipulasi Thresholding
+## Pemisahan Channel Warna
 ### Mendeklarasikan Library
 
 ```bash
@@ -46,7 +46,7 @@ plt.show()
 Disini kita menampilkan gambar serta tiga komponen warna lainnya (Red, Green, Blue) dalam empat bagian yang berbeda pada output. Pertama, kita membuat tempatnya (figur) seukuran besar di mana gambar akan ditampilkan. Kemudian, kita bagi tempat ini menjadi empat bagian kecil, yang masing-masing akan menampilkan sesuatu yang berbeda. Bagian pertama menampilkan gambar aslinya. Kemudian, bagian-bagian berikutnya menampilkan masing-masing warna utama dari gambar tersebut (merah, hijau, dan biru) dalam bentuk abu-abu. Lalu, kita hapus sumbu-sumbu agar tampilan menjadi lebih bersih.
 
 Ketika kita memisahkan dan menampilkan komponen warna dari sebuah gambar, seperti merah, hijau, dan biru, kita bisa melihat bagaimana masing-masing warna berkontribusi terhadap gambar aslinya. Misalnya, jika gambar tersebut memiliki banyak warna merah yang kuat, ketika kita melihat komponen merah (R), kita akan melihat area yang berwarna merah cerah. Namun, jika ada area dalam gambar yang kurang memiliki warna merah, maka pada komponen merah (R) tersebut, area tersebut akan terlihat lebih gelap atau memiliki nilai piksel yang rendah. 
-
+### Menampilkan Histogram dan manipulasi thresholding
 ### Membuat Histogram
 ```bash
 #membuat Histogram untuk citra asli 
@@ -63,7 +63,7 @@ histB = cv2.calcHist([B],[0],None,[256],[0,256])
 ```
 Disini kita menghitung dan dan membuat histogram untuk gambar asli serta untuk masing masing komponen warna(Red, Green, Blue). Pertama, histogram untuk gambar asli dihitung menggunakan cv2.calcHist() dengan parameter gambar asli (img). Hasilnya akan menunjukkan distribusi intensitas piksel dalam skala abu-abu dari 0 hingga 255. Selanjutnya, histogram untuk setiap komponen warna diproses secara terpisah. Misalnya, histR menghitung histogram untuk komponen warna merah (R) dari gambar. Proses ini diulangi untuk komponen hijau (G) dan biru (B). Hasilnya adalah empat histogram yang mewakili distribusi intensitas piksel dari masing-masing komponen warna. 
 
-### Menampilkan Histogram dan manipulasi thresholding
+
 ```bash
 fig, axs = plt.subplots(2, 2, figsize=(20, 10))
 
