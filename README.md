@@ -1,6 +1,5 @@
-# PCD_UTS_202231056_2024_ITPLN
-
-## UTS NO 1
+## pemisahan channel warna, visualisasi histogram, dan manipulasi thresholding
+## pemisahan channel warna
 ### Mendeklarasikan Library
 
 ```bash
@@ -64,7 +63,7 @@ histB = cv2.calcHist([B],[0],None,[256],[0,256])
 ```
 Disini kita menghitung dan dan membuat histogram untuk gambar asli serta untuk masing masing komponen warna(Red, Green, Blue). Pertama, histogram untuk gambar asli dihitung menggunakan cv2.calcHist() dengan parameter gambar asli (img). Hasilnya akan menunjukkan distribusi intensitas piksel dalam skala abu-abu dari 0 hingga 255. Selanjutnya, histogram untuk setiap komponen warna diproses secara terpisah. Misalnya, histR menghitung histogram untuk komponen warna merah (R) dari gambar. Proses ini diulangi untuk komponen hijau (G) dan biru (B). Hasilnya adalah empat histogram yang mewakili distribusi intensitas piksel dari masing-masing komponen warna. 
 
-### Menampilkan Histogram
+### Menampilkan Histogram dan manipulasi thresholding
 ```bash
 fig, axs = plt.subplots(2, 2, figsize=(20, 10))
 
@@ -85,7 +84,7 @@ plt.show()
 Lalu kita menampilkan empat histogram dalam satu tampilan menggunakan subplot. Pertama, kita membuat sebuah figur dengan empat subplot menggunakan plt.subplots(2, 2, figsize=(20, 10)). Ini berarti kita memiliki empat bagian di layar, yang akan menampilkan histogram gambar asli serta histogram untuk masing-masing komponen warna (merah, hijau, dan biru). Kemudian, kita memplot histogram gambar asli dan masing-masing histogram komponen warna pada subplot yang sesuai. Misalnya, axs[1,1].plot(histimg, color='black') memplot histogram gambar asli pada subplot di baris kedua dan kolom kedua. Setelah memplot histogram, kita memberikan judul untuk setiap subplot menggunakan set_title(), misalnya, 'Histogram Gambar Asli' untuk histogram gambar asli. Setiap histogram diplot dengan warna yang sesuai dengan komponen warna yang direpresentasikan, seperti merah untuk komponen merah, hijau untuk komponen hijau, dan biru untuk komponen biru. Lalu kita menggunakan plt.show() untuk menampilkan plot yang telah dibuat. Hasilnya kita bisa membandingkan distribusi intensitas piksel dari gambar asli serta masing-masing komponen warnanya.
 
 
-## UTS NO 2
+## visualisasi histogram
 ### Mendeklarasikan Library
 ```bash
 import cv2
